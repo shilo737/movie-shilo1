@@ -1,53 +1,27 @@
-import { Badge, Carousel } from 'flowbite-react';
-import React from 'react'
+import {  Carousel } from "flowbite-react";
+import React from "react";
+import Header from "./Header";
 
 const CarouselImg = () => {
-  return (       
-<div>
-<div className="h-72 sm:h-64 xl:h-80 2xl:h-96">
-  {/* <Carousel>
-    <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
-      <img src="https://cdn.moviefone.com/image-assets/23168/3NIzyXkfylsjflRKSz8Fts3lXzm.jpg?d=360x540&q=60" alt="" />
-    </div>
-    <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
-      <img src="https://i.ytimg.com/vi/zhbWBx6ryMI/hqdefault.jpg" alt="" />
-    </div>
-    <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
-      <img src="" alt="" />
-    </div>
-  </Carousel> */}
-  
-</div>
-<div className="h{'200px'} sm:h-64 xl:h-80 2xl:h-96">
-  <Carousel
-    leftControl="left"
-    rightControl="right"
-  >
-    <img
-      src="https://pbs.twimg.com/media/FoxkJMDXwAUFuMt.jpg:large"
-      alt="..."
-    />
-    <img
-      src="https://i.ytimg.com/vi/zhbWBx6ryMI/hqdefault.jpg"
-      alt="..."
-    />
-    <img
-      src="https://cdn.moviefone.com/image-assets/23168/3NIzyXkfylsjflRKSz8Fts3lXzm.jpg?d=360x540&q=60"
-      alt="..."
-    />
-    <img
-      src="https://cdn.moviefone.com/admin-uploads/posters/bdonline1sht01-poster_1495561897.jpg?d=360x540&q=60"
-      alt="..."
-    />
-    <img
-      src="https://bestsimilar.com/img/movie/thumb/c9/67920.jpg"
-      alt="..."
-    />
-  </Carousel>
-</div>
-      
-    </div>
-  )
-}
+  return (
+      <div className="h-[500px] ">
+       <Header/>
+        <Carousel slideInterval={1000} leftControl="left" rightControl="right">
+          <img className="h-[600px] xl:w-[1900px]  w-[800px] md:w-[1500px]"
+            src="https://img1.hulu.com/user/v3/artwork/adab412f-cee5-4b48-880f-c832da1a0420?base_image_bucket_name=image_manager&base_image=71dc5f6e-b892-4b77-b81e-7410e333ff7f&region=US&format=jpeg&size=952x536"
+            alt="..."
+          />
+          <img className="h-[600px] xl:w-[1900px]  w-[800px] md:w-[1500px]"
+            src="https://tvshowpilot.com/wp-content/uploads/2021/03/best-heist-tv-shows-list.jpg"
+            alt="..."
+          />
+          <img className="h-[600px] xl:w-[1900px]  w-[800px] md:w-[1500px]"
+            src="https://assets.reedpopcdn.com/-1618408528198.jpg/BROK/resize/1200x1200%3E/format/jpg/quality/70/-1618408528198.jpg"
+            alt="..."
+          />
+        </Carousel>
+      </div>
+  );
+};
 
-export default CarouselImg
+export default CarouselImg;

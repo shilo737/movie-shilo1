@@ -1,18 +1,19 @@
 import React from 'react'
-import CarouselImg from './CarouselImg';
 import MoviesApi from './MoviesApi';
 import Years from './Years';
 
 const Home = () => {
   return (
-    <div>
-    <div className="">
-      <CarouselImg/>
+    <div className="bg-local">
+      <div className="container mx-auto">
         <Years/>
         <MoviesApi/>
+        </div>
    </div>
-    </div>
+    
   )
 }
 
 export default Home
+
+// style={{backgroundImage: `url("https://i.ytimg.com/vi/oeknLqxExk4/maxresdefault.jpg")`,}
