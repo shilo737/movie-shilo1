@@ -6,12 +6,11 @@ const CarouselImg = () => {
   return (
       <div className="h-[500px] ">
        
-        <Carousel slideInterval={1000}>
+        <Carousel slideInterval={3000}>
           <img className="h-[600px] xl:w-[1900px]  w-[800px] md:w-[1500px]"
             src="https://img1.hulu.com/user/v3/artwork/adab412f-cee5-4b48-880f-c832da1a0420?base_image_bucket_name=image_manager&base_image=71dc5f6e-b892-4b77-b81e-7410e333ff7f&region=US&format=jpeg&size=952x536"
             alt="..."
           />
-
           <img className="h-[600px] xl:w-[1900px]  w-[800px] md:w-[1500px]"
             src="https://tvshowpilot.com/wp-content/uploads/2021/03/best-heist-tv-shows-list.jpg"
             alt="..."

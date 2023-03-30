@@ -1,4 +1,5 @@
 import React from 'react'
+import CarouselImg from './CarouselImg';
 
 const Header = () => {
   return (
@@ -30,6 +31,8 @@ const Header = () => {
     </div>
   </div>
 </div>
+
+<CarouselImg/>
     </div>
   )
 }
