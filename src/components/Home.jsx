@@ -1,16 +1,13 @@
 import React from 'react'
-import CarouselImg from './CarouselImg';
 import MoviesApi from './MoviesApi';
-import SearchMovie from './SearchMovie';
+
+
 
 
 const Home = () => {
   return (
-    <div>  
-      
+    <div>     
     <MoviesApi/> 
-     
-
    </div> 
   )
 }
