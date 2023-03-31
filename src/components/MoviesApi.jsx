@@ -25,7 +25,7 @@ const MoviesApi = () => {
     <div className="container mx-auto">
       <div className="flex">
         <div className="flex-1 mt-5">
-        <SearchYear/>
+       
         </div>
 
         <div className="flex-none w-80 mt-5">

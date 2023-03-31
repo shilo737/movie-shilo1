@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
 const SearchYear = () => {
-const{years}=useParams()
-const[year,setYear]= useState([])
+const {yearQ} =useParams()
+const[year,setYear]= useState([2020])
 
 const movieYear = async () => {
-    const URL = years
-      ? `https://www.omdbapi.com/?s=bank&y=${years}apikey=1a336721`
+    const URL = year
+      ? `https://www.omdbapi.com/?s=bank&y=${yearQ}apikey=1a336721`
       : `https://www.omdbapi.com/?s=bank&apikey=1a336721`;
     const { data } = await axios.get(URL);
     console.log(data.Search.year);
