@@ -1,6 +1,6 @@
 import {  Carousel } from "flowbite-react";
 import React from "react";
-import Header from "./Header";
+
 
 const CarouselImg = () => {
   return (
