@@ -1,13 +1,23 @@
 import React from 'react'
-import MoviesApi from './MoviesApi';
+
 
 
 
 
 const Home = () => {
+
+  const doApi = async (searchQ) =>{
+    let {data} = await axios.get(`https://www.omdbapi.com/?s=${searchQ}&apikey=f2ef2741`)
+    console.log(data.Search);
+  }
+  useEffect(()=>{
+    doApi("fast")
+  })
   return (
     <div>     
-    <MoviesApi/> 
+    
+
+
    </div> 
   )
 }
