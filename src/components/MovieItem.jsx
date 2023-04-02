@@ -5,10 +5,10 @@ const MovieItem = ({item}) => {
     const navigate = useNavigate()
     
   return (
-    <div>
+    <div className='shadow-2xl'>
         <img src={item.Poster} alt=""/>
         <p>{item.Title}</p>
-        <button onClick={()=> navigate(`/info/${item.imdbID}`)}>Mote info</button>
+        <button className='btn shadow-lg shadow-indigo-500/40' onClick={()=> navigate(`/info/${item.imdbID}`)}>Mote info</button>
 
 
     </div>

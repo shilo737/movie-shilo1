@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import {useSearchParams } from "react-router-dom";
 import MovieList from './MovieList';
 import MovieInput from './MovieInput';
+import CarouselImg from './CarouselImg';
 
 const Home = () => {
   const [movie, setMovie] = useState([]);
@@ -21,7 +22,8 @@ const Home = () => {
   },[query]);
 
   return (
-    <div>
+    <div className=''>
+      <CarouselImg/>
       <MovieInput/>
       <MovieList vod_movie={movie}/>
     </div>
