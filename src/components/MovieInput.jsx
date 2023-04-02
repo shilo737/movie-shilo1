@@ -20,9 +20,9 @@ const MovieInput = () => {
             ref={inputRef}
             type="text"
             placeholder="Search…"
-            className="input input-bordered"
+            className="input input-bordered outline outline-cyan-500  "
           />
-          <button onClick={() => onClicks()} className="btn btn-square">
+          <button onClick={() => onClicks()} className="btn btn-square ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"

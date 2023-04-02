@@ -2,13 +2,14 @@ import { Carousel } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import MovieInput from "./MovieInput";
+import myLogo from '../assets/logo.png'
 
 const CarouselImg = () => {
   return (
     <div className="">
       <div className="absolute z-10 bg-transparent navbar">
         <div className="flex-1 text-5xl font-extrabold ">
-          <Link to="/"> <p className="btn btn-ghost normal-case text-3xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">Movie Express</p> </Link>
+          <Link to="/"><img className=" rounded rounded-3xl h-[70px] w-[260px]" src={myLogo} alt=""/></Link>
         </div>
         <div className="flex-none gap-2">
           <div className="form-control">
@@ -17,7 +18,7 @@ const CarouselImg = () => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src="https://randomuser.me/api/portraits/men/62.jpg" />
               </div>
             </label>
             <ul
@@ -44,7 +45,7 @@ const CarouselImg = () => {
       <div className="h-[550px] ">
         <Carousel slideInterval={3000}>
           <img
-            className="h-[580px] xl:w-[1900px]  w-[800px] md:w-[1500px]"
+            className="h-[580px] xl:w-[1900px]  w-[800px] md:w-[1500px] "
             src="https://www.thebusinessdesk.com/_files/images/jan_23/Bank-of-Dave.jpg"
             alt="..."
           />
