@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div className=''>
       <CarouselImg/>
-      <MovieInput/>
+      
       <MovieList vod_movie={movie}/>
     </div>
   );
