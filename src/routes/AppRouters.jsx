@@ -4,6 +4,7 @@ import Home from '../components/Home';
 import Layout from '../layout/Layout';
 import NotFound40 from '../layout/NotFound404';
 import MovieInfo from '../components/MovieInfo';
+import Footer from '../components/Footer';
 
 const AppRouters = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouters = () => {
         </Route>
         <Route path='*' element={<NotFound40/>}/>
     </Routes>
+    <Footer/> 
    </Router>
   )
 }

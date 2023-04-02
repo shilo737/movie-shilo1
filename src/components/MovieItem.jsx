@@ -5,9 +5,9 @@ const MovieItem = ({item}) => {
     const navigate = useNavigate()
     
   return (
-    <div className='shadow-2xlg py-6 hover:'>
-      <div className="card w-[280px]  shadow-xl shadow-red-500/50 ">
-  <figure><img className='rounded-lg transition hover ' src={item.Poster} alt="Shoes" /></figure>
+    <div className='shadow-2xlg py-6 '>
+      <div className="card w-[250px] shadow-xl shadow-red-500/50 ">
+  <figure><img className='rounded-lg transition hover hover:scale-125' src={item.Poster} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title italic">{item.Title}</h2>
     <div className="card-actions justify-end">

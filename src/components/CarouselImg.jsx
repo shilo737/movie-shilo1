@@ -9,7 +9,7 @@ const CarouselImg = () => {
     <div className="">
       <div className="absolute z-10 bg-transparent navbar">
         <div className="flex-1 text-5xl font-extrabold ">
-          <Link to="/"><img className=" rounded rounded-3xl h-[70px] w-[260px]" src={myLogo} alt=""/></Link>
+          <Link to="/"><img className=" rounded rounded-3xl md:h-[70px] md:w-[260px] w-[150px] h-[70px]" src={myLogo} alt=""/></Link>
         </div>
         <div className="flex-none gap-2">
           <div className="form-control">
@@ -45,8 +45,8 @@ const CarouselImg = () => {
       <div className="h-[550px] ">
         <Carousel slideInterval={3000}>
           <img
-            className="h-[580px] xl:w-[1900px]  w-[800px] md:w-[1500px] "
-            src="https://www.thebusinessdesk.com/_files/images/jan_23/Bank-of-Dave.jpg"
+            className="h-[630px] xl:w-[1900px]  w-[800px] md:w-[1500px] "
+            src="https://cdn.mos.cms.futurecdn.net/HexHbb8H3c2A9WpLBdtLHV.jpg"
             alt="..."
           />
           <img
