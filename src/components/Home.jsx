@@ -4,7 +4,8 @@ import {useSearchParams } from "react-router-dom";
 import MovieList from './MovieList';
 import MovieInput from './MovieInput';
 import CarouselImg from './CarouselImg';
-import Exsemple from '../../Exsemple';
+import MovieYear from './MovieYear';
+
 
 const Home = () => {
   const [movie, setMovie] = useState([]);
@@ -24,10 +25,11 @@ const Home = () => {
 
   return (
     <div className=''>
-      <Exsemple/>
+     
       <CarouselImg/>
-      
+      <MovieYear vod_movie={movie}/>
       <MovieList vod_movie={movie}/>
+      
     </div>
   );
 };

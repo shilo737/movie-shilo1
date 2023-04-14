@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const MovieItem = ({item}) => {
     const navigate = useNavigate()
     
+    
   return (
     <div className='shadow-2xlg py-6 '>
       <div className="card w-[250px] shadow-xl shadow-red-500/50 ">
