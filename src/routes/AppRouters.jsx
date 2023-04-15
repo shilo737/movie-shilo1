@@ -13,6 +13,7 @@ const AppRouters = () => {
         <Route path='/' element={<Layout/>}>
         <Route index element={<Home/>}/>
         <Route path="/info/:id" element={<MovieInfo/>}/>
+        <Route path='/year/:y' element={<Home/>}/>
         
         </Route>
         <Route path='/*' element={<NotFound40/>}/>

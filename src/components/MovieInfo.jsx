@@ -15,9 +15,8 @@ const MovieInfo = () => {
   }, []);
   const doApi = async () => {
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?i=${params["id"]}&apikey=8434eb59`
+      `http://www.omdbapi.com/?i=${params.id}&apikey=8434eb59`
     );
-    console.log(data);
     setItem(data);
   };
   useEffect(()=> {

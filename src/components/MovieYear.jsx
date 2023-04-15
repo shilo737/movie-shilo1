@@ -4,19 +4,18 @@ import MovieItem from './MovieItem';
 
 const MovieYear = ({item}) => {
    const navigate = useNavigate()
-   const years =()=>{
-    let val_but = button.value
+   const {y} = useParams()
+   console.log(y);
 
-   }
    console.log(item);
   return (
 
     <div>
    <ul>
     <li>
-       <button value={2020}>2020</button> 
+       <button onClick={()=>navigate("/year/2020")}>2020</button> 
     </li>
-    <li>2021</li>
+    <li><button onClick={()=>navigate("/year/2021")}>2021</button> </li>
     <li>2022</li>
    </ul>
     </div>
