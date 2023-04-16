@@ -9,10 +9,15 @@ const MovieYear = () => {
 
   const doApi = async () => {
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?s=bank&y=${year}&apikey=8434eb59`
+      `http://www.omdbapi.com/?s=bank&y=2021&apikey=8434eb59`
     );
     setItem(data);
     console.log(data);
+    const filters = () =>{
+      const mewP = data.filter((items)=> items.Year === year)
+      console.log(mewP);
+    }
+   
   };
 
   useEffect(() => {
