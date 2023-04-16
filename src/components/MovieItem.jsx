@@ -13,6 +13,7 @@ const MovieItem = ({item}) => {
     <h2 className="card-title italic">{item.Title}</h2>
     <div className="card-actions justify-end">
       <button onClick={()=> navigate(`/info/${item.imdbID}`)}  className="btn btn-primary shadow-lg shadow-indigo-500/40 opacity-75 transition duration-700 ease-in-out">More</button>
+      <button onClick={()=>navigate(`/year/${item.Year}`)}>2022</button>
     </div>
   </div>
 </div>

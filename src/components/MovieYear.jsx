@@ -1,25 +1,30 @@
-import React, { useRef } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import MovieItem from './MovieItem';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import {useParams } from "react-router-dom";
 
-const MovieYear = ({item}) => {
-   const navigate = useNavigate()
-   const {y} = useParams()
-   console.log(y);
 
-   console.log(item);
+const MovieYear = () => {
+  const [item, setItem] = useState([]);
+  const {year} = useParams()
+
+  const doApi = async () => {
+    const { data } = await axios.get(
+      `http://www.omdbapi.com/?s=bank&y=${year}&apikey=8434eb59`
+    );
+    setItem(data);
+    console.log(data);
+  };
+
+  useEffect(() => {
+    doApi();
+  }, []);
   return (
-
-    <div>
-   <ul>
-    <li>
-       <button onClick={()=>navigate("/year/2020")}>2020</button> 
-    </li>
-    <li><button onClick={()=>navigate("/year/2021")}>2021</button> </li>
-    <li>2022</li>
-   </ul>
+    <div className="">
+      <img src={item.Poster} alt="" />
+     <p>{item.Year}</p>
+     <p>{item.Title}</p>
     </div>
-  )
-}
+  );
+};
 
-export default MovieYear
+export default MovieYear;

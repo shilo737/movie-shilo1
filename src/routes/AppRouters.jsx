@@ -5,6 +5,8 @@ import Layout from '../layout/Layout';
 import NotFound40 from '../layout/NotFound404';
 import MovieInfo from '../components/MovieInfo';
 import Footer from '../components/Footer';
+import MovieItem from '../components/MovieItem';
+import MovieYear from '../components/MovieYear';
 
 const AppRouters = () => {
   return (
@@ -13,7 +15,7 @@ const AppRouters = () => {
         <Route path='/' element={<Layout/>}>
         <Route index element={<Home/>}/>
         <Route path="/info/:id" element={<MovieInfo/>}/>
-        <Route path='/year/:y' element={<Home/>}/>
+        <Route path='/year/:year' element={<MovieYear/>}/>
         
         </Route>
         <Route path='/*' element={<NotFound40/>}/>
