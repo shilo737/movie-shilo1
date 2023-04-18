@@ -33,7 +33,11 @@ const MovieInfo = () => {
         <div className="h-screen bg-gradient-to-br from-pink-300 to-indigo-700 flex justify-center items-center w-full">
           <div className="card lg:card-side bg-base-100 shadow-xl bg-gradient-to-r from-indigo-500 shadow-3xl shadow-red-500/50 w-[90%]">
             <figure>
-              <img src={item.Poster} alt="Album" />
+              <img
+                src={item.Poster}
+                alt="Album"
+                className="h-[500px] w-[500px]"
+              />
             </figure>
             <div className="card-body italic font-serif font-bold">
               <h2 className="card-title text-4xl">{item.Title}</h2>
@@ -42,7 +46,36 @@ const MovieInfo = () => {
                 <li className="mt-3">{item.Plot}</li>
                 <li className="mt-2">Genre : {item.Genre}</li>
                 <li className="mt-2">Actors : {item.Actors}</li>
-                <li className="mt-3">{item.imdbRating}</li>
+                <li className="mt-3">
+                  {item.imdbRating}
+                  <div className="rating ml-2 absolute">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-orange-400"
+                    />
+                  </div>
+                </li>
                 <li></li>
               </ul>
               <div className="card-actions justify-end">

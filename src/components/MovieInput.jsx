@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 const MovieInput = () => {
   const inputRef = useRef();
   const nav = useNavigate();
+
+  
   const onClicks = () => {
     let input_val = inputRef.current.value;
     nav(`/?s=${input_val}`);

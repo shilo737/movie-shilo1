@@ -1,20 +1,23 @@
 import axios from 'axios';
 import React, { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import MovieList from './MovieList';
 import CarouselImg from './CarouselImg';
+import MovieYear from './MovieYear';
+import Select from './Select';
 
 
 
 const Home = () => {
   const [movie, setMovie] = useState([]);
   const [query] = useSearchParams();
+  const {Year} = useParams()
 
-  
-  
   const doApi = async (searchQ) => {
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?s=${searchQ}&apikey=8434eb59`
+      !Year ?`http://www.omdbapi.com/?s=${searchQ}&apikey=8434eb59`
+      :`http://www.omdbapi.com/?s=${searchQ}&y=${Year}apikey=8434eb59`
+      
     );
     setMovie(data.Search);
   };
@@ -27,8 +30,11 @@ const Home = () => {
     <div className=''>
      
       <CarouselImg/>
-      
-      <MovieList vod_movie={movie}/>
+      <div className="">
+        <Select query={query}/>
+      </div>
+      {/* <MovieYear searchQ={searchQ}/> */}
+      <MovieList vod_movie={movie} idYear={Year}/>
       
       
     </div>
